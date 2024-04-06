@@ -1,0 +1,23 @@
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Name</th>
+      <th class="px-4 py-2">Email</th>
+      <th class="px-4 py-2">Phone Number</th>
+      <th class="px-4 py-2">Address</th>
+      <th class="px-4 py-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td class="border px-4 py-2">{{ user.name }}</td>
+      <td class="border px-4 py-2">{{ user.email }}</td>
+      <td class="border px-4 py-2">{{ user.phone }}</td>
+      <td class="border px-4 py-2">{{ user.address }}</td>
+      <td class="border px-4 py-2">
+        <button (click)="editUser(user)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2">Edit</button>
+        <button (click)="deleteUser(user)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
