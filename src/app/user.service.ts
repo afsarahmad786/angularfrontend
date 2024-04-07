@@ -17,7 +17,15 @@ export class UserService {
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>('http://localhost:3000/users');
   }
+  private apiUrl = 'http://localhost:3000/users'; // Replace with your backend API URL
+  getUser(userId: string): Observable<any> {
+    const url = `${this.apiUrl}/${userId}`;
+    return this.http.get<any>(url);
+  }
 
-
+  updateUser(userId: string, userData: any): Observable<any> {
+    const url = `${this.apiUrl}/${userId}`;
+    return this.http.put<any>(url, userData);
+  }
   
 }

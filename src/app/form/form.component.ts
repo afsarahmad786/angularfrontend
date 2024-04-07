@@ -3,6 +3,7 @@ import { Component ,ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { FormDataService } from '../form-data.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-form',
@@ -17,7 +18,7 @@ import { FormDataService } from '../form-data.service';
 export class FormComponent {
   formData: any = {};
 
-  constructor(private formDataService: FormDataService) {}
+  constructor(private formDataService: FormDataService,private userService: UserService) {}
 
   submitForm() {
     console.log(this.formData); // You can do further processing here

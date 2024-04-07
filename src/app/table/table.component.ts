@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { CommonModule } from '@angular/common';
+import { GeneratePdfComponent } from '../generate-pdf/generate-pdf.component';
+import { PdfDownloadComponent } from '../pdf-download/pdf-download.component';
+import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,GeneratePdfComponent,PdfDownloadComponent,PdfViewerComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',
   providers: [

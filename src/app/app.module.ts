@@ -2,8 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { IntegrationComponent } from './integration/integration.component'; // Import IntegrationComponent
-
+import { IntegrationComponent } from './integration/integration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -11,7 +10,6 @@ import { IntegrationComponent } from './integration/integration.component'; // I
   ],
   imports: [
     BrowserModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
